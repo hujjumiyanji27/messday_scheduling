@@ -1,0 +1,320 @@
+img {
+  display: block; /* Make the image a block element to center it horizontally */
+  margin: 0 auto; /* Auto margin left and right to center it horizontally */
+  max-width: 100%; /* Ensure the image doesn't exceed its container's width */
+  height: auto; /* Maintain the aspect ratio of the image */
+  width: 300px; /* Set a specific width for the image, adjust as needed */
+}
+
+.box {
+  width: 100%;
+  height: 20%;
+  position: relative;
+  background: url("shape_texture_banner.png") no-repeat center center;
+  background-size: cover;
+  text-align: center;
+  color: white; /* Text color */
+}
+
+.box img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  opacity: 0; /* Hide the image, assuming you want to use the background image */
+}
+
+.box::before {
+  content: "Get to Know Us";
+  position: absolute;
+  top: 10%; /* Vertically center the text */
+  left: 50%; /* Horizontally center the text */
+  transform: translate(
+    -50%,
+    -50%
+  ); /* Center both horizontally and vertically */
+  font-size: 20px; /* Adjust the font size as needed */
+  font-family: Roboto;
+}
+
+/* for the card overlapping */
+.card {
+  position: absolute;
+  top: auto; /* Vertically center the card within the .box */
+  left: 20%; /* Horizontally center the card within the .box */
+  transform: translate(
+    -50%,
+    -50%
+  ); /* Center both horizontally and vertically */
+  margin: 0; /* Remove any margin added by Bootstrap */
+}
+
+/* container 2 */
+
+.container2 {
+  margin-top: 20%;
+}
+
+/* Additional styles for cards and container2 as needed */
+
+/* CALENDAR.PHP CSS */
+
+table {
+  table-layout: fixed;
+  width: 100%;
+}
+
+/* Style the table cells (days) to have equal width and center the content */
+td {
+  width: 14.28%; /* 100% divided by 7 days */
+  text-align: center;
+  padding: 5px;
+  border: 1px solid #ddd;
+}
+
+/* Style the calendar header (days of the week) */
+.header {
+  background-color: #f2f2f2;
+}
+
+/* Style the current day with a yellow background */
+.today {
+  background: yellow;
+}
+
+/* Center the month and year header */
+h2 {
+  text-align: center;
+}
+
+/* for home page container2 */
+
+/* Style for container */
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between; /* Adjust as needed for spacing between cards */
+  flex-wrap: wrap; /* Allow cards to wrap to the next line if the container is not wide enough */
+  margin-top: 20px;
+}
+
+.container2 {
+  width: calc(
+    25% - 20px
+  ); /* Adjust the width and margin as needed for spacing between cards */
+  margin: 10px; /* Adjust as needed for spacing between cards */
+  background: transparent; /* Set the background color to transparent */
+  text-align: center;
+  padding: 20px;
+  box-shadow: 0 0 0px rgba(0, 0, 0, 0); /* Optional box shadow for cards */
+}
+
+.container2 img {
+  max-width: 80%;
+  height: auto;
+  border: 2px solid #fff;
+  transition: transform 0.2s;
+}
+
+.container2 img:hover {
+  transform: scale(1.1);
+}
+
+.container2 p {
+  font-size: 18px;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.heading1 {
+  padding-top: 25%;
+  text-align: center;
+  font-family: Roboto;
+}
+
+/* footer css */
+/* footer css */
+/* Apply a white background to the entire footer */
+.cci_footer_row {
+  background-color: #fff;
+  padding: 20px;
+}
+
+/* Style each footer menu container (columns) */
+.cci_footer_menus_cont {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+/* Style individual footer menus (columns) */
+.cci_footer_menus {
+  flex: 1;
+  margin: 0 10px;
+}
+
+.cci_footer_menus h3 {
+  font-weight: bold;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.cci_footer_menus ul {
+  list-style: none;
+  padding: 0;
+}
+
+.cci_footer_menus li {
+  margin-bottom: 5px;
+}
+
+.cci_footer_menus a {
+  text-decoration: none;
+  color: #333; /* Text color */
+  transition: color 0.3s;
+}
+
+.cci_footer_menus a:hover {
+  color: #00b3e3; /* Text color on hover */
+}
+
+/* Style the footer logo */
+.cci_footer_logo {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.cci_footer_logo img {
+  max-width: 200px;
+  height: auto;
+}
+
+/* Optional: Add some space around the footer menus */
+.cci_footer_row {
+  padding: 20px;
+}
+
+/* Optional: Center the entire footer content */
+.cci_content_wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+hr {
+  border: 0;
+  height: 3px; /* Set the thickness of the line */
+  background-color: #000; /* Set the line color to black */
+  margin: 20px 0; /* Add margin for spacing */
+}
+
+/* responsive screen css  */
+/* Media query for smaller screens, e.g., mobile devices */
+@media (max-width: 768px) {
+  .container_card {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .card {
+    width: 100%;
+    margin: 10px 0;
+    height: auto; /* Make the height automatic for responsiveness */
+  }
+}
+
+/* Media query for smaller screens, e.g., mobile devices */
+@media (max-width: 779px) {
+  .box {
+    flex-direction: column;
+    margin-top: 20px;
+  }
+  .container_card {
+    flex-direction: column;
+    margin-top: 15px;
+  }
+  .container {
+    flex-direction: column; /* Stack cards vertically on smaller screens */
+    margin-top: 20%; /* Reduce the top margin for spacing */
+  }
+
+  .container2 {
+    width: 100%; /* Make the cards full width on smaller screens */
+    margin: 10px 0; /* Adjust margin for spacing between cards */
+  }
+
+  .container2 img {
+    max-width: 100%; /* Make images responsive */
+  }
+
+  .heading1 {
+    padding-top: 10%; /* Reduce the top padding for smaller screens */
+  }
+}
+
+.box2 {
+  width: 100%;
+  height: 20%;
+  position: relative;
+  background: url("shape_texture_banner.png") no-repeat center center;
+  background-size: cover;
+  text-align: center;
+  color: white; /* Text color */
+}
+
+.box2 img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  opacity: 0; /* Hide the image, assuming you want to use the background image */
+}
+
+.box2::before {
+  content: "Useful Resources";
+  position: absolute;
+  top: 10%; /* Vertically center the text */
+  left: 50%; /* Horizontally center the text */
+  transform: translate(
+    -50%,
+    -50%
+  ); /* Center both horizontally and vertically */
+  font-size: 20px; /* Adjust the font size as needed */
+  font-family: Roboto;
+}
+
+/* box 3 css */
+.box3 {
+  width: 100%;
+  height: 10%;
+  position: relative;
+  background: url("https://chici.org/wp-content/uploads/2021/09/MESS-Days.png")
+    no-repeat center center;
+  background-size: cover;
+  text-align: center;
+  color: white; /* Text color */
+}
+
+.box3 img {
+  display: block;
+  width: 100%;
+  height: 20%;
+  opacity: -20%; /* Hide the image, assuming you want to use the background image */
+}
+
+.box3::before {
+  content: "Take Part in our M.E.S.S. Days";
+  position: absolute;
+  top: 10%; /* Vertically center the text */
+  left: 50%; /* Horizontally center the text */
+  transform: translate(
+    -50%,
+    -50%
+  ); /* Center both horizontally and vertically */
+  font-size: 20px; /* Adjust the font size as needed */
+  font-family: Roboto;
+}
+
+.box3 h1 {
+  text-align: center;
+  color: #fff;
+  font-family: roboto;
+  font-size: 20px;
+}
